@@ -61,7 +61,6 @@ In order to train a new model use the `train.py` script. Here is how one would t
 ```
 python train.py \
   --data data/negotiate \
-  --cuda \
   --bsz 16 \
   --clip 0.5 \
   --decay_every 1 \
@@ -106,7 +105,7 @@ python reinforce.py \
   --temperature 0.5 \
   --alice_model sv_model.th \
   --bob_model sv_model.th \
-  --output_model_file rl_model.th
+  --output_model_file rl_model.th #SBATCH --partition-gpu
 
 ```
 ### Selfplay
